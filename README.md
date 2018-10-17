@@ -23,4 +23,59 @@ let show = {
     print("this is closure.")
 }
 show()
+
+//closure 傳入function
+func repeatTask(count: Int, task: () -> ()) {
+    for _ in 1...count {
+        task()
+    }
+}
+func eat() {
+    let message = "吃飯"
+    print(message)
+}
+func sleep() {
+    let message = "睡覺"
+    print(message)
+}
+//呼叫repeatTask 傳入function參數
+repeatTask(count: 2, task: eat)
+repeatTask(count: 1, task: sleep)
+
+//呼叫repeatTask 傳入closure參數,如此可以省略eat、sleep function的定義
+repeatTask(count: 2, task: {() -> () in
+    let message = "吃飯"
+    print(message)
+})
+repeatTask(count: 1, task: {() -> () in
+    let message = "睡覺"
+    print(message)
+})
+
+//呼叫repeatTask 傳入closure參數並簡化() -> () in
+repeatTask(count: 2, task: {
+    let message = "吃飯"
+    print(message)
+})
+repeatTask(count: 1, task: {
+    let message = "睡覺"
+    print(message)
+})
+
+//trailing closure尾隨閉包,將上面closure的參數名省略及獨立程式碼區塊到最後面,提升程式可讀性
+repeatTask(count: 2) {
+    let message = "吃飯"
+    print(message)
+}
+repeatTask(count: 1) {
+    let message = "睡覺"
+    print(message)
+}
+
+//帶參數closure
+let listen = {(singer: String, song: String) -> () in
+    let message = "聽 \(singer) 唱 \(song)"
+    print(message)
+}
+listen("五月天", "離開地球表面")
 ```
