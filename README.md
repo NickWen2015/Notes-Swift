@@ -124,8 +124,16 @@ prince3.pet1?.run()
 prince3.pet2?.jump()
 
 ```
+## access control 權限管理 共５種
+- swift不只可以針對屬性property及方法function權限控管，像class、struct、enum、protocol、initializer...亦可．
 
-
+| 權限修飾詞 | 敘述 | 限制 |
+| ------ | ------ | ------ |
+| open | 最公開的權限，可讓別的模組使用，例如framework函式庫，主要是要讓其他app也可以使用 | 僅能用於class的屬性及方法 |
+| public | 相較於open權限，可宣告於struct、enum宣告的型別，並讓其他模組使用 | 宣告為public的class僅能讓同一個模組中的class繼承，宣告為public的屬性property及方法function僅能讓同一個模組中的class覆寫 |
+| internal | 沒特別註明修飾詞，預設即為internal | 只能在定義的模組內使用 |
+| fileprivate | 檔案私有權限 | 只能在宣告的檔案裡使用 |
+| private | 私有權限 | 最私密的權限，只能在宣告的地方使用 |
 
 
 
