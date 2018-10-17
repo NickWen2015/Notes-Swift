@@ -1,6 +1,6 @@
 |swift學習筆記 |
 | ------ |
-- closure
+## closure
 
 ```sh
 //正常func並呼叫
@@ -86,7 +86,7 @@ let listen = {(singer: String, song: String) -> () in
 }
 listen("五月天", "離開地球表面")
 ```
-- generic
+## generic
 ```sh
 //generic 泛型
 class Fox {
