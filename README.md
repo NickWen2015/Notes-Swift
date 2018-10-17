@@ -1,6 +1,6 @@
-# swift
-
-## closure
+|swift學習筆記 |
+| ------ |
+- closure
 
 ```sh
 //正常func並呼叫
