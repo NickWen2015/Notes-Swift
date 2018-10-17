@@ -1,6 +1,7 @@
 # swift
 
-##closure
+## closure
+
 ```sh
 //正常func並呼叫
 func show() -> () {
