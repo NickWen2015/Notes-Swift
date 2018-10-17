@@ -1,5 +1,32 @@
 |swift學習筆記 |
 | ------ |
+## function 內外部標籤
+```sh
+func show (name:String) {
+    print("我是\(name)王")
+}
+//呼叫函式帶標籤內外標籤一樣
+show(name: "寶寶")
+
+func show0 (who name:String) {
+    print("我是無敵\(name)王")
+}
+//呼叫函式帶外部標籤
+show0(who:"寶寶")
+
+func show1 (_ name:String) {
+    print("我是超級\(name)王")
+}
+//呼叫函式不帶標籤
+show1("寶寶")
+
+```
+```sh
+//結果
+我是寶寶王
+我是無敵寶寶王
+我是超級寶寶王
+```
 ## closure
 
 ```sh
