@@ -163,7 +163,7 @@ prince3.pet2?.jump()
 | private | 私有權限 | 最私密的權限，只能在宣告的地方使用 |
 
 ## error handling
-- 自定義一個錯誤protocol須遵守swift內建的error協定
+- 自定義一個錯誤enum須遵守swift內建的error協定
 ```sh
 //程式寫不好的錯誤原因
 enum ProgrammingError: Error {
