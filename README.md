@@ -173,4 +173,8 @@ enum ProgrammingError: Error {
     case CanNotUnderstandProblem
 }
 ```
-
+## delegate
+- 敘述說明
+在ios程式中舉凡GPS座標取得、拍照...等等都有delegate蹤影，基本上delegate是一種callback機制，讓類別在做某些事時可以呼叫另一個類別中的函數，
+例如A類別要B類別做一些事情，並要求B類別完成後通知A類別，通知的方式就是呼叫A類別中的函數，而A類別的函數必須符合某個delegate的規範。
+---
